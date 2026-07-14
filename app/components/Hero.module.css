@@ -1,0 +1,321 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: var(--space-4xl) 0;
+    position: relative;
+    overflow: hidden;
+    background: #0a0a0c; /* Deep dark premium background */
+}
+
+/* Background Video */
+.videoWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25; /* Subtle background presence */
+    filter: saturate(1.2);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(10, 10, 12, 0.2) 0%, #0a0a0c 80%);
+    z-index: 2;
+}
+
+/* Ambient Glowing Orbs */
+.glowingOrb1 {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: 2;
+    filter: blur(40px);
+    animation: floatOrb 10s ease-in-out infinite alternate;
+}
+
+.glowingOrb2 {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: 2;
+    filter: blur(50px);
+    animation: floatOrb 14s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floatOrb {
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(-40px) scale(1.1); }
+}
+
+.content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 var(--space-xl);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4xl);
+    width: 100%;
+    position: relative;
+    z-index: 3;
+}
+
+.text {
+    flex: 1.1;
+    max-width: 600px;
+}
+
+.visual {
+    flex: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Staggered animation triggers */
+.greeting,
+.name,
+.badge,
+.desc,
+.actions,
+.visual {
+    opacity: 0;
+    transform: translateY(24px);
+}
+
+.loaded .greeting { animation: fadeInUp 0.7s ease forwards 0s; }
+.loaded .name { animation: fadeInUp 0.7s ease forwards 0.15s; }
+.loaded .badge { animation: fadeInUp 0.7s ease forwards 0.3s; }
+.loaded .desc { animation: fadeInUp 0.7s ease forwards 0.45s; }
+.loaded .actions { animation: fadeInUp 0.7s ease forwards 0.6s; }
+.loaded .visual { animation: fadeInUp 0.7s ease forwards 0.35s; }
+
+/* Text Elements */
+.greeting {
+    font-size: var(--font-size-md);
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    margin-bottom: var(--space-xs);
+    letter-spacing: 0.05em;
+}
+
+.name {
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+    color: #ffffff;
+}
+
+.gradientText {
+    background: linear-gradient(135deg, #ffffff 30%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 30px;
+    font-size: var(--font-size-sm);
+    color: #3b82f6;
+    font-weight: 500;
+    margin-bottom: var(--space-lg);
+}
+
+.badgeDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    box-shadow: 0 0 8px #3b82f6;
+    animation: pulseDot 2s infinite;
+}
+
+@keyframes pulseDot {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.desc {
+    font-size: var(--font-size-base);
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8;
+    margin-bottom: var(--space-2xl);
+}
+
+.actions {
+    display: flex;
+    gap: var(--space-md);
+}
+
+/* Custom Buttons for Hero Section */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border: 1.5px solid transparent;
+    text-decoration: none;
+}
+
+.btnPrimary {
+    background: #ffffff;
+    color: #0a0a0c;
+}
+
+.btnPrimary:hover {
+    background: #e5e5e5;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+.btnOutline {
+    background: rgba(255, 255, 255, 0.03);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+}
+
+.btnOutline:hover {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Glassmorphic Code Card Visual */
+.codeCard {
+    width: 100%;
+    max-width: 440px;
+    background: rgba(20, 20, 25, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 18px;
+    background: rgba(255, 255, 255, 0.03);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.windowButtons {
+    display: flex;
+    gap: 6px;
+}
+
+.windowButtons span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dotRed { background-color: #ff5f56; }
+.dotYellow { background-color: #ffbd2e; }
+.dotGreen { background-color: #27c93f; }
+
+.cardTitle {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.05em;
+}
+
+.cardBody {
+    padding: var(--space-lg) var(--space-xl);
+    font-size: 12px;
+    line-height: 1.8;
+    color: #e5e5e5;
+    overflow-x: auto;
+}
+
+/* Code Syntax Colors */
+.syntaxBrace { color: #facc15; }
+.syntaxKey { color: #60a5fa; }
+.syntaxString { color: #34d399; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .content {
+        gap: var(--space-2xl);
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+        padding-top: var(--space-4xl);
+        gap: var(--space-3xl);
+    }
+
+    .desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .actions {
+        justify-content: center;
+    }
+
+    .visual {
+        width: 100%;
+    }
+
+    .codeCard {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+}
