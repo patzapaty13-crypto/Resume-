@@ -1,3 +1,46 @@
+@import "tailwindcss";
+
+/* ==========================================
+   Tailwind v4 Theme — Custom Design Tokens
+   ========================================== */
+@theme {
+  --color-primary: #3b82f6;
+  --color-primary-dark: #2563eb;
+  --color-primary-light: #60a5fa;
+  --color-secondary: #eff6ff;
+  --color-secondary-dark: #dbeafe;
+  --color-accent: #10b981;
+  --color-accent-dark: #059669;
+  --font-sans: 'Inter', 'Noto Sans Thai', sans-serif;
+  --animate-fadeIn: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar for chat areas */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
 /* ==========================================
    Design System — Clean & Minimal Resume
    ========================================== */

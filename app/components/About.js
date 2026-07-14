@@ -56,20 +56,40 @@ export default function About() {
     <section className="section" id="about">
       <div className="container">
         <h2 className="section-title">เกี่ยวกับผม</h2>
-        <div className={styles.grid}>
-          {cards.map((card, i) => (
-            <ScrollReveal key={i} delay={i * 100}>
-              <div className={styles.card}>
-                <div className={styles.icon}>{card.icon}</div>
-                <h3>{card.title}</h3>
-                {card.highlight && (
-                  <p className={styles.highlight}>{card.highlight}</p>
-                )}
-                <p className={styles.text}>{card.text}</p>
-                {card.sub && <p className={styles.sub}>{card.sub}</p>}
+        <div className={styles.containerGrid}>
+          <ScrollReveal delay={50}>
+            <div className={styles.profileCard}>
+              <div className={styles.avatarWrapper}>
+                <img src="/profile.jpg" className={styles.avatar} alt="ธนธรณ์ ศิริพันธ์" />
+                <div className={styles.avatarGlow} />
               </div>
-            </ScrollReveal>
-          ))}
+              <div className={styles.profileInfo}>
+                <h3>ธนธรณ์ ศิริพันธ์</h3>
+                <p className={styles.role}>Full-Stack Developer & AI Automation Specialist</p>
+                <p className={styles.bio}>
+                  รับออกแบบและพัฒนาเว็บไซต์ (เว็บองค์กร / E-commerce / เซลส์เพจ) ให้ทันสมัยและช่วยเพิ่มยอดขาย 
+                  ดีไซน์สวย รองรับทุกหน้าจอ (Responsive) วางโครงสร้างรองรับ SEO ส่งงานตรงเวลา คุยง่าย 
+                  และมีบริการดูแลหลังส่งงาน พร้อมช่วยวางระบบ AI Automation (n8n & Make) เพื่อลดงานซ้ำซ้อน ยกระดับประสิทธิภาพธุรกิจ
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          <div className={styles.grid}>
+            {cards.map((card, i) => (
+              <ScrollReveal key={i} delay={i * 100}>
+                <div className={styles.card}>
+                  <div className={styles.icon}>{card.icon}</div>
+                  <h3>{card.title}</h3>
+                  {card.highlight && (
+                    <p className={styles.highlight}>{card.highlight}</p>
+                  )}
+                  <p className={styles.text}>{card.text}</p>
+                  {card.sub && <p className={styles.sub}>{card.sub}</p>}
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>
