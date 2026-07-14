@@ -45,10 +45,7 @@ export default function Hero() {
             <span className={styles.badgeDot}></span>
             Full-Stack Developer
           </div>
-          <p className={styles.desc}>
-            นักพัฒนาซอฟต์แวร์ที่มุ่งเน้นการสร้างเว็บแอปพลิเคชันที่มีคุณภาพ
-            ออกแบบ UI/UX ที่เรียบง่ายแต่ทรงพลัง และพัฒนาระบบหลังบ้านที่มั่นคง
-          </p>
+
           <div className={styles.actions}>
             <a href="#contact" className={`${styles.btn} ${styles.btnPrimary}`}>
               ติดต่อผม
