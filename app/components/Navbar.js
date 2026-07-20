@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import styles from "./Navbar.module.css";
 
 const navItems = [
@@ -15,6 +15,8 @@ export default function Navbar() {
   const [visible, setVisible] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+  const [indicatorStyle, setIndicatorStyle] = useState({});
+  const linksRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,6 +44,32 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, []);
 
+  /* Slide the active indicator pill under the current link */
+  const updateIndicator = useCallback(() => {
+    if (!linksRef.current || !activeSection) {
+      setIndicatorStyle({ opacity: 0 });
+      return;
+    }
+    const activeLink = linksRef.current.querySelector(
+      `a[href="#${activeSection}"]`
+    );
+    if (activeLink) {
+      const parent = linksRef.current.getBoundingClientRect();
+      const rect = activeLink.getBoundingClientRect();
+      setIndicatorStyle({
+        left: rect.left - parent.left,
+        width: rect.width,
+        opacity: 1,
+      });
+    }
+  }, [activeSection]);
+
+  useEffect(() => {
+    updateIndicator();
+    window.addEventListener("resize", updateIndicator);
+    return () => window.removeEventListener("resize", updateIndicator);
+  }, [updateIndicator]);
+
   const scrollTo = (e, href) => {
     e.preventDefault();
     setMobileOpen(false);
@@ -55,6 +83,9 @@ export default function Navbar() {
 
   return (
     <nav className={`${styles.navbar} ${visible ? styles.visible : ""}`}>
+      {/* Top shimmer line */}
+      <div className={styles.shimmerLine} />
+
       <div className={styles.container}>
         <a
           href="#hero"
@@ -64,15 +95,25 @@ export default function Navbar() {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          ธ.ศ.
+          <span className={styles.logoText}>ธ.ศ.</span>
         </a>
 
-        <ul className={`${styles.links} ${mobileOpen ? styles.open : ""}`}>
-          {navItems.map((item) => (
-            <li key={item.href}>
+        <ul
+          ref={linksRef}
+          className={`${styles.links} ${mobileOpen ? styles.open : ""}`}
+        >
+          {/* Sliding active indicator (desktop only) */}
+          <li className={styles.indicatorWrapper} aria-hidden>
+            <span className={styles.indicator} style={indicatorStyle} />
+          </li>
+
+          {navItems.map((item, i) => (
+            <li key={item.href} style={{ "--i": i }}>
               <a
                 href={item.href}
-                className={activeSection === item.href.slice(1) ? styles.active : ""}
+                className={
+                  activeSection === item.href.slice(1) ? styles.active : ""
+                }
                 onClick={(e) => scrollTo(e, item.href)}
               >
                 {item.label}
@@ -82,7 +123,9 @@ export default function Navbar() {
         </ul>
 
         <button
-          className={`${styles.toggle} ${mobileOpen ? styles.toggleActive : ""}`}
+          className={`${styles.toggle} ${
+            mobileOpen ? styles.toggleActive : ""
+          }`}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle navigation"
         >
