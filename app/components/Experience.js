@@ -1,7 +1,6 @@
 "use client";
 
 import ScrollReveal from "./ScrollReveal";
-import styles from "./Experience.module.css";
 
 const timeline = [
   {
@@ -42,23 +41,37 @@ const timeline = [
 
 export default function Experience() {
   return (
-    <section className="section" id="experience">
-      <div className="container">
-        <h2 className="section-title">ประสบการณ์</h2>
-        <div className={styles.timeline}>
+    <section className="py-24" id="experience">
+      <div className="max-w-[1100px] mx-auto px-8">
+        <h2 className="text-3xl font-semibold tracking-tight mb-12 relative inline-block after:absolute after:-bottom-2 after:left-0 after:w-10 after:h-[3px] after:bg-primary after:rounded-sm">
+          ประสบการณ์
+        </h2>
+
+        <div className="relative pl-16 max-md:pl-10 before:absolute before:left-[7px] before:top-2 before:bottom-2 before:w-px before:bg-gray-200">
           {timeline.map((item, i) => (
             <ScrollReveal key={i} delay={i * 150}>
-              <div className={styles.item}>
+              <div className={`relative ${i < timeline.length - 1 ? "mb-16" : ""}`}>
+                {/* Dot */}
                 <div
-                  className={`${styles.dot} ${item.active ? styles.dotActive : ""}`}
+                  className={`absolute -left-16 max-md:-left-10 top-2 w-[13px] h-[13px] rounded-full border-2 border-primary z-[1] ${
+                    item.active ? "bg-primary" : "bg-[#fafafa]"
+                  }`}
                 />
-                <div className={styles.content}>
-                  <span className={styles.date}>{item.date}</span>
-                  <h3>{item.title}</h3>
-                  <p className={styles.company}>{item.company}</p>
-                  <ul>
+                {/* Card */}
+                <div className="bg-white border border-gray-200 rounded-2xl px-8 py-6 transition-all duration-300 hover:shadow-md hover:border-transparent">
+                  <span className="text-xs font-semibold uppercase tracking-widest text-primary inline-block mb-1">
+                    {item.date}
+                  </span>
+                  <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
+                  <p className="text-sm text-gray-500 mb-4">{item.company}</p>
+                  <ul className="list-none p-0">
                     {item.items.map((li, j) => (
-                      <li key={j}>{li}</li>
+                      <li
+                        key={j}
+                        className="text-sm text-gray-500 pl-5 relative mb-2 leading-relaxed before:absolute before:left-0 before:top-[10px] before:w-[5px] before:h-[5px] before:rounded-full before:bg-gray-200"
+                      >
+                        {li}
+                      </li>
                     ))}
                   </ul>
                 </div>
