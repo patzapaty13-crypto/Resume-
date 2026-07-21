@@ -129,7 +129,7 @@ export const en = {
         badge: "Cybersecurity Certified & PM Lead",
         initials: "BS",
         color: "from-purple-600 to-violet-700",
-        avatar: null,
+        avatar: "/bawornwit.jpg",
         email: "bavonvit99@gmail.com",
         github: "https://github.com/Bobangely",
         bio: "Managing project timelines and quality governance (Project Manager). Certified in specialized Cybersecurity standards with full-stack development expertise.",

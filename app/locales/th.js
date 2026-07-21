@@ -129,7 +129,7 @@ export const th = {
         badge: "Cybersecurity Certified & PM Lead",
         initials: "BS",
         color: "from-purple-600 to-violet-700",
-        avatar: null,
+        avatar: "/bawornwit.jpg",
         email: "bavonvit99@gmail.com",
         github: "https://github.com/Bobangely",
         bio: "รับหน้าที่บริหารและประสานงานโครงการ (Project Manager) ควบคุมไทม์ไลน์และคุณภาพการพัฒนาซอฟต์แวร์ ผ่านการฝึกอบรมเฉพาะทางด้าน Cybersecurity และมีความสามารถในการพัฒนาระบบ Full-Stack",
