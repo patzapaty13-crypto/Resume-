@@ -119,12 +119,22 @@ export default function Team() {
                     {/* Header with Avatar & Badge */}
                     <div className="flex items-start justify-between gap-4 mb-4 pt-1">
                       <div className="relative">
-                        <div
-                          className={`w-14 h-14 rounded-xl bg-gradient-to-br ${member.color} text-white font-bold text-lg flex items-center justify-center shadow-md group-hover:scale-105 transition-transform`}
-                        >
-                          {member.initials}
-                        </div>
-                        <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-white rounded-full p-1 shadow-sm flex items-center justify-center">
+                        {member.avatar ? (
+                          <div className="w-14 h-14 rounded-xl overflow-hidden shadow-md group-hover:scale-105 transition-transform border border-gray-200">
+                            <img
+                              src={member.avatar}
+                              alt={member.name}
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        ) : (
+                          <div
+                            className={`w-14 h-14 rounded-xl bg-gradient-to-br ${member.color} text-white font-bold text-lg flex items-center justify-center shadow-md group-hover:scale-105 transition-transform`}
+                          >
+                            {member.initials}
+                          </div>
+                        )}
+                        <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-white rounded-full p-1 shadow-sm flex items-center justify-center border border-gray-100">
                           <RoleIcon className="w-3.5 h-3.5 text-gray-700" />
                         </div>
                       </div>
