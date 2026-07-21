@@ -216,7 +216,7 @@ export const th = {
         badge: "Google Cloud AI & Cybersecurity Trained",
         initials: "TS",
         color: "from-cyan-600 to-blue-700",
-        avatar: "/profile.jpg",
+        avatar: "/thanathorn.jpg",
         email: "patzapaty13@gmail.com",
         github: "https://github.com/patzapaty13-crypto",
         bio: "ปฏิบัติหน้าที่ Google Student Ambassador และ Tactical Support ในงาน Google Cloud AI Lab ผ่านการฝึกอบรม Cybersecurity เชี่ยวชาญการพัฒนา Full-Stack, การวิเคราะห์ข้อมูล และ AI Automation Workflow",

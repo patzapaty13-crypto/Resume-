@@ -216,7 +216,7 @@ export const en = {
         badge: "Google Cloud AI & Cybersecurity Trained",
         initials: "TS",
         color: "from-cyan-600 to-blue-700",
-        avatar: "/profile.jpg",
+        avatar: "/thanathorn.jpg",
         email: "patzapaty13@gmail.com",
         github: "https://github.com/patzapaty13-crypto",
         bio: "Serving as Google Student Ambassador and Tactical Support member at Google Cloud AI Lab. Cybersecurity certified with full-stack, data analytics, and AI workflow experience.",
