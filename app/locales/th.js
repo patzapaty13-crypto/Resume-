@@ -37,7 +37,7 @@ export const th = {
         badge: "UX/UI & Frontend Specialist",
         initials: "WS",
         color: "from-blue-600 to-indigo-700",
-        avatar: "/profile.jpg",
+        avatar: null,
         email: "2310511101014@live4.utcc.ac.th",
         github: "https://github.com/Nonperchica",
         bio: "เชี่ยวชาญการพัฒนา Frontend ด้วย React, Vue.js และ Tailwind CSS ร่วมกับการออกแบบ UI/UX ใน Figma การจัดทำ Design System และการค้นคว้าพฤติกรรมผู้ใช้เพื่อสร้างประสบการณ์การใช้งานที่ดีเยี่ยม",
