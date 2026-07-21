@@ -173,7 +173,7 @@ export const th = {
         badge: "High-Volume Data & Security",
         initials: "KM",
         color: "from-rose-600 to-amber-700",
-        avatar: null,
+        avatar: "/kathapong.jpg",
         email: "kathapong123@hotmail.com",
         github: "https://github.com/KMluvcod11",
         bio: "มีความเชี่ยวชาญการพัฒนาระบบหลังบ้าน (Backend) โดยเน้นความปลอดภัยของระบบและการป้องกันช่องโหว่ มีประสบการณ์จัดการข้อมูลขนาดใหญ่ (High-volume Data) และวิเคราะห์สถิติข้อมูล",
