@@ -43,31 +43,36 @@ export default function Navbar() {
     }
   };
 
+  const navItems = ["about", "team", "skills", "projects", "packages", "contact"];
+
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-[1000] bg-[rgba(250,250,250,0.85)] backdrop-blur-xl border-b border-gray-200 transition-transform duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[1000] bg-[rgba(250,250,250,0.92)] backdrop-blur-xl border-b border-gray-200/80 transition-transform duration-300 ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="max-w-[1100px] mx-auto px-8 flex items-center justify-between h-[60px]">
+      <div className="max-w-[1100px] mx-auto px-6 md:px-8 flex items-center justify-between h-[60px]">
         <a
           href="#hero"
-          className="text-lg font-bold tracking-tight text-gray-900"
+          className="text-lg font-bold tracking-tight text-gray-900 shrink-0"
           onClick={(e) => {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
         >
-          <span>ธ.ศ.</span>
+          <span className="text-xs md:text-sm font-black uppercase tracking-tight bg-gradient-to-r from-gray-900 via-gray-800 to-primary bg-clip-text text-transparent">
+            CR7XMESSI & YAMAL
+          </span>
         </a>
 
-        <div className="flex items-center gap-6 max-md:hidden">
-          {["about", "skills", "experience", "projects", "packages", "contact"].map((item) => (
+        {/* Desktop Links */}
+        <div className="flex items-center gap-4 lg:gap-5 max-md:hidden">
+          {navItems.map((item) => (
             <a
               key={item}
               href={`#${item}`}
-              className={`text-sm font-medium transition-colors ${
-                activeSection === item ? "text-gray-900" : "text-gray-500 hover:text-gray-900"
+              className={`text-xs lg:text-sm font-medium transition-colors shrink-0 ${
+                activeSection === item ? "text-gray-900 font-semibold" : "text-gray-500 hover:text-gray-900"
               }`}
               onClick={(e) => scrollTo(e, `#${item}`)}
             >
@@ -75,26 +80,27 @@ export default function Navbar() {
             </a>
           ))}
           
-          <div className="w-[1px] h-4 bg-gray-300" />
+          <div className="w-[1px] h-4 bg-gray-300 shrink-0" />
           
           <button
             onClick={toggleLocale}
-            className="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors"
+            className="flex items-center gap-1.5 text-xs font-semibold text-gray-500 hover:text-gray-900 transition-colors shrink-0"
             title="Toggle Language"
           >
-            <Globe className="w-4 h-4" />
+            <Globe className="w-3.5 h-3.5" />
             <span className="uppercase">{locale}</span>
           </button>
 
           <button
             onClick={() => window.dispatchEvent(new Event("open-ai-chat"))}
-            className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-gray-900 text-white hover:bg-gray-800 transition-colors"
+            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-gray-900 text-white hover:bg-gray-800 transition-colors shrink-0 shadow-xs"
           >
-            <MessageSquare className="w-4 h-4" />
-            {t.nav.chat}
+            <MessageSquare className="w-3.5 h-3.5" />
+            <span>{t.nav.chat}</span>
           </button>
         </div>
 
+        {/* Mobile Toggle */}
         <button
           className="hidden max-md:flex flex-col gap-[5px] bg-transparent border-none cursor-pointer p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -113,12 +119,12 @@ export default function Navbar() {
         }`}
       >
         <ul className="flex flex-col p-6 gap-4">
-          {["about", "skills", "experience", "projects", "packages", "contact"].map((item) => (
+          {navItems.map((item) => (
             <li key={item}>
               <a
                 href={`#${item}`}
                 className={`text-sm font-medium transition-colors ${
-                  activeSection === item ? "text-gray-900" : "text-gray-500 hover:text-gray-900"
+                  activeSection === item ? "text-gray-900 font-semibold" : "text-gray-500 hover:text-gray-900"
                 }`}
                 onClick={(e) => scrollTo(e, `#${item}`)}
               >
@@ -127,7 +133,7 @@ export default function Navbar() {
             </li>
           ))}
           <li className="h-[1px] bg-gray-200 my-2" />
-          <li className="flex items-center gap-4">
+          <li className="flex items-center justify-between">
             <button
               onClick={toggleLocale}
               className="flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors"
@@ -135,8 +141,6 @@ export default function Navbar() {
               <Globe className="w-4 h-4" />
               <span className="uppercase">{locale}</span>
             </button>
-          </li>
-          <li>
             <button
               onClick={() => {
                 setMobileOpen(false);
@@ -145,7 +149,7 @@ export default function Navbar() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-gray-900 text-white hover:bg-gray-800 transition-colors"
             >
               <MessageSquare className="w-4 h-4" />
-              {t.nav.chat}
+              <span>{t.nav.chat}</span>
             </button>
           </li>
         </ul>
@@ -153,4 +157,3 @@ export default function Navbar() {
     </nav>
   );
 }
-

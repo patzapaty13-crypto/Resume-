@@ -40,9 +40,9 @@ export default function Contact() {
 
   const contacts = [
     {
-      href: "mailto:patzapaty13@gmail.com",
-      label: "Email",
-      value: "patzapaty13@gmail.com",
+      href: "mailto:wakakawananon@gmail.com",
+      label: "Team Email",
+      value: "wakakawananon@gmail.com",
       icon: Mail,
     },
     {

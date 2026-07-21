@@ -1,6 +1,6 @@
 "use client";
 
-import { X } from "lucide-react";
+import { X, Users } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 
@@ -13,7 +13,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
       setIsVisible(true);
       document.body.style.overflow = "hidden";
     } else {
-      setTimeout(() => setIsVisible(false), 300); // fade out duration
+      setTimeout(() => setIsVisible(false), 300);
       document.body.style.overflow = "unset";
     }
     return () => {
@@ -65,7 +65,28 @@ export default function ProjectModal({ project, isOpen, onClose }) {
 
           {/* Content */}
           <div className="p-6 sm:p-10">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-4">{project.title}</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-gray-900">{project.title}</h2>
+
+            {/* Team Contributors List */}
+            {project.contributors && (
+              <div className="mb-5 p-3.5 bg-gray-50 border border-gray-200/80 rounded-xl">
+                <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                  <Users className="w-3.5 h-3.5 text-primary" />
+                  <span>{t.projects.teamMembers || "ทีมผู้พัฒนา (Contributors):"}</span>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {project.contributors.map((name) => (
+                    <span
+                      key={name}
+                      className="text-xs font-semibold bg-white text-gray-800 px-3 py-1 rounded-lg border border-gray-200 shadow-2xs"
+                    >
+                      {name}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
             <div className="flex flex-wrap gap-2 mb-6">
               {project.tags?.map((tag) => (
                 <span
@@ -101,7 +122,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-2.5 bg-primary text-white text-sm font-medium rounded-lg hover:bg-blue-600 transition-colors"
+                  className="px-6 py-2.5 bg-primary text-white text-sm font-medium rounded-lg hover:bg-blue-600 transition-colors shadow-sm"
                 >
                   {project.demo.includes("fastwork.co") ? t.projects.fastwork : t.projects.liveDemo}
                 </a>

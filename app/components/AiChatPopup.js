@@ -12,8 +12,8 @@ export default function AiChatPopup() {
       id: "welcome",
       role: "ai",
       content: t.locale === "th" 
-        ? "สวัสดีครับ! ผมคือผู้ช่วย AI ของคุณธนธรณ์ มีอะไรให้ผมช่วยเหลือหรืออยากสอบถามข้อมูลเกี่ยวกับบริการ พิมพ์บอกได้เลยครับ 👋"
-        : "Hello! I am Thanathorn's AI Assistant. How can I help you today or what would you like to know about my services? 👋"
+        ? "สวัสดีครับ! พวกเราคือผู้ช่วย AI ของทีม CR7XMESSI AND YAMAL CHAMPION มีอะไรให้พวกเราช่วยเหลือหรืออยากสอบถามเกี่ยวกับทีมและบริการ พิมพ์บอกได้เลยครับ 👋"
+        : "Hello! We are the AI Assistant for CR7XMESSI AND YAMAL CHAMPION team. How can we help you today? 👋"
     }
   ]);
   const [inputValue, setInputValue] = useState("");

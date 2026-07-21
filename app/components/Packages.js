@@ -1,7 +1,7 @@
 "use client";
 
 import ScrollReveal from "./ScrollReveal";
-import { Check, Globe, Laptop, Cpu, Layers } from "lucide-react";
+import { Check, Globe, Laptop, Cpu, Layers, ArrowRight } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Packages() {
@@ -103,9 +103,10 @@ export default function Packages() {
                     href="https://fastwork.co/byob/KJCm6w4Jbs?openExternalBrowser=1&source=byob"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center py-2.5 px-4 rounded-xl text-xs font-semibold tracking-wide bg-primary text-white hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/25 transition-all duration-200"
+                    className="w-full inline-flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-xl text-xs font-semibold tracking-wide bg-primary text-white hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/25 transition-all duration-200"
                   >
-                    {t.packages.fastwork} →
+                    <span>{t.packages.fastwork}</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                   <a
                     href="#contact"

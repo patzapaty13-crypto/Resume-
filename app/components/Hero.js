@@ -38,8 +38,8 @@ export default function Hero() {
           <p className="text-lg text-white/60 font-normal mb-1 tracking-wider" style={anim(0)}>
             {t.hero.greeting}
           </p>
-          <h1 className="text-5xl max-md:text-4xl font-bold tracking-tight leading-[1.2] mb-4 text-white" style={anim(0.15)}>
-            ธนธรณ์ <span className="bg-gradient-to-r from-white via-white to-primary bg-clip-text text-transparent">ศิริพันธ์</span>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.2] mb-4 text-white uppercase" style={anim(0.15)}>
+            CR7XMESSI <span className="bg-gradient-to-r from-white via-blue-200 to-primary bg-clip-text text-transparent">AND YAMAL CHAMPION</span>
           </h1>
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-sm text-primary font-medium mb-6" style={anim(0.3)}>
             <span className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_#3b82f6] animate-[pulseDot_2s_infinite]" />
@@ -52,7 +52,7 @@ export default function Hero() {
             <a href="#projects" className="inline-flex items-center justify-center px-7 py-3 rounded-lg text-sm font-medium bg-white/[0.03] text-white border border-white/15 backdrop-blur-sm hover:border-white hover:bg-white/[0.08] hover:-translate-y-0.5 transition-all">
               {t.hero.viewWork}
             </a>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-lg text-sm font-medium bg-primary/10 text-primary border border-primary/20 backdrop-blur-sm hover:bg-primary/20 hover:border-primary/30 hover:-translate-y-0.5 transition-all">
+            <a href="#about" className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-lg text-sm font-medium bg-primary/10 text-primary border border-primary/20 backdrop-blur-sm hover:bg-primary/20 hover:border-primary/30 hover:-translate-y-0.5 transition-all">
               <Download className="w-4 h-4" /> {t.hero.resume}
             </a>
           </div>
@@ -67,17 +67,17 @@ export default function Hero() {
                 <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
                 <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
               </div>
-              <span className="text-[11px] text-white/40 tracking-wider">developer.json</span>
+              <span className="text-[11px] text-white/40 tracking-wider">team.json</span>
             </div>
             <div className="px-6 py-5 text-xs leading-[1.8] text-gray-200 overflow-x-auto">
               <pre><code>
 {`{`}
-{"\n"}{"  "}<span className="text-blue-400">{`"name"`}</span>: <span className="text-emerald-400">{`"Thanathorn Siriphan"`}</span>,
-{"\n"}{"  "}<span className="text-blue-400">{`"role"`}</span>: <span className="text-emerald-400">{`"Full-Stack Developer"`}</span>,
-{"\n"}{"  "}<span className="text-blue-400">{`"education"`}</span>: <span className="text-emerald-400">{`"UTCC (หอการค้าไทย)"`}</span>,
-{"\n"}{"  "}<span className="text-blue-400">{`"frontend"`}</span>: <span className="text-yellow-400">[</span><span className="text-emerald-400">"React"</span>, <span className="text-emerald-400">"Next.js"</span><span className="text-yellow-400">]</span>,
-{"\n"}{"  "}<span className="text-blue-400">{`"backend"`}</span>: <span className="text-yellow-400">[</span><span className="text-emerald-400">"Spring Boot"</span>, <span className="text-emerald-400">"Node.js"</span><span className="text-yellow-400">]</span>,
-{"\n"}{"  "}<span className="text-blue-400">{`"database"`}</span>: <span className="text-yellow-400">[</span><span className="text-emerald-400">"MySQL"</span>, <span className="text-emerald-400">"PostgreSQL"</span>, <span className="text-emerald-400">"MongoDB"</span><span className="text-yellow-400">]</span>
+{"\n"}{"  "}<span className="text-blue-400">{`"teamName"`}</span>: <span className="text-emerald-400">{`"CR7XMESSI AND YAMAL CHAMPION"`}</span>,
+{"\n"}{"  "}<span className="text-blue-400">{`"members"`}</span>: <span className="text-purple-400">5</span>,
+{"\n"}{"  "}<span className="text-blue-400">{`"roles"`}</span>: <span className="text-yellow-400">[</span><span className="text-emerald-400">"Frontend"</span>, <span className="text-emerald-400">"Backend"</span>, <span className="text-emerald-400">"Full-Stack"</span>, <span className="text-emerald-400">"PM"</span>, <span className="text-emerald-400">"AI Automation"</span><span className="text-yellow-400">]</span>,
+{"\n"}{"  "}<span className="text-blue-400">{`"frontend"`}</span>: <span className="text-yellow-400">[</span><span className="text-emerald-400">"React"</span>, <span className="text-emerald-400">"Next.js"</span>, <span className="text-emerald-400">"Vue.js"</span><span className="text-yellow-400">]</span>,
+{"\n"}{"  "}<span className="text-blue-400">{`"backend"`}</span>: <span className="text-yellow-400">[</span><span className="text-emerald-400">"Spring Boot"</span>, <span className="text-emerald-400">"Node.js"</span>, <span className="text-emerald-400">"Express.js"</span><span className="text-yellow-400">]</span>,
+{"\n"}{"  "}<span className="text-blue-400">{`"security_ai"`}</span>: <span className="text-yellow-400">[</span><span className="text-emerald-400">"Cybersecurity"</span>, <span className="text-emerald-400">"n8n"</span>, <span className="text-emerald-400">"Google Cloud AI"</span><span className="text-yellow-400">]</span>
 {"\n"}{`}`}
               </code></pre>
             </div>
