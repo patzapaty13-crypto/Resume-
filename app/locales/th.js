@@ -85,7 +85,7 @@ export const th = {
         badge: "Full-Stack & AI Automation",
         initials: "EN",
         color: "from-emerald-600 to-teal-700",
-        avatar: null,
+        avatar: "/ekarin.jpg",
         email: "mikp1919@gmail.com",
         github: "https://github.com/Xkaroy",
         bio: "มีความยืดหยุ่นในการทำงานสูง สามารถสื่อสารและทำงานร่วมกับทีมได้อย่างมีประสิทธิภาพ เชี่ยวชาญการพัฒนาระบบครบวงจร (Frontend & Backend) และการสร้างระบบทำงานอัตโนมัติด้วย AI",
