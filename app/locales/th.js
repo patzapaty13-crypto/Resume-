@@ -34,45 +34,36 @@ export const th = {
         name: "วนนนท์ แสงทอง",
         role: "Frontend Developer & UX/UI Designer",
         roleUpper: "FRONTEND DEVELOPER & UX/UI DESIGNER",
-        badge: "UX/UI & Frontend Specialist",
+        badge: "Customer Journey & Design Thinking Lead",
         initials: "WS",
         color: "from-blue-600 to-indigo-700",
-        avatar: null,
+        avatar: "/wananon.jpg",
         email: "2310511101014@live4.utcc.ac.th",
         github: "https://github.com/Nonperchica",
-        bio: "เชี่ยวชาญการพัฒนา Frontend ด้วย React, Vue.js และ Tailwind CSS ร่วมกับการออกแบบ UI/UX ใน Figma การจัดทำ Design System และการค้นคว้าพฤติกรรมผู้ใช้เพื่อสร้างประสบการณ์การใช้งานที่ดีเยี่ยม",
+        bio: "เชี่ยวชาญการพัฒนา Frontend ด้วย React, Vue.js และ Tailwind CSS ร่วมกับการออกแบบ UI/UX ใน Figma การจัดทำ Design System และการค้นคว้าพฤติกรรมผู้ใช้ เพื่อสร้าง Customer Journey ในโซลูชัน Fintech ที่ใช้งานง่ายและปลอดภัย",
         education: {
           highlight: "มหาวิทยาลัยหอการค้าไทย",
           text: "ปริญญาตรี คณะวิทยาศาสตร์และเทคโนโลยี สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยหอการค้าไทย (UTCC)",
           sub: "University of the Thai Chamber of Commerce"
         },
-        expertise: "Frontend & UX/UI Design — ออกแบบส่วนติดต่อผู้ใช้ด้วย Figma, พัฒนาเว็บด้วย React, Vue.js, TypeScript และเชื่อมต่อ RESTful API",
-        goals: "สร้างสรรค์อินเทอร์เฟซที่สวยงาม ใช้งานง่าย มีประสิทธิภาพสูง และตอบโจทย์ผู้ใช้งานจริงอย่างครอบคลุม",
-        skills: ["Frontend Web/Mobile", "Responsive Design", "Component Architecture", "RESTful API", "UX Research", "Figma Design System", "Vue.js / React", "TypeScript"],
+        expertise: "Customer Journey & Design Thinking Lead — ออกแบบส่วนติดต่อผู้ใช้ด้วย Figma, วิเคราะห์พฤติกรรมผู้ใช้ทางการเงิน, พัฒนาเว็บด้วย React/Vue.js และลดความผิดพลาดในการทำธุรกรรม",
+        goals: "สร้างสรรค์อินเทอร์เฟซที่สวยงาม ใช้งานง่าย มีประสิทธิภาพสูง และสร้างความไว้วางใจในการทำธุรกรรมทางการเงินแก่ผู้ใช้จริง",
+        skills: ["Customer Journey", "Design Thinking", "Frontend Web/Mobile", "Responsive Design", "RESTful API", "UX Research", "Figma Design System", "Vue.js / React"],
         sections: [
           {
-            title: "Frontend Development",
+            title: "Fintech Alignment: Customer Journey & Design Thinking",
+            items: [
+              "ออกแบบและสร้างสรรค์ Customer Journey สำหรับโซลูชัน Fintech เพื่อลดความซับซ้อนในขั้นตอนทำธุรกรรม",
+              "ประยุกต์ใช้ Design Thinking และ UX Research ในการลดความกังวลของผู้ใช้ (User Anxiety) และป้องกันการกดทำธุรกรรมผิดพลาด",
+              "สร้างสรรค์ Design System ใน Figma ที่มีความน่าเชื่อถือ ปลอดภัย และใช้งานง่ายบนทุกอุปกรณ์"
+            ]
+          },
+          {
+            title: "Frontend Development & Engineering",
             items: [
               "พัฒนาเว็บไซต์และเว็บแอปพลิเคชันรองรับทุกอุปกรณ์ (Responsive Design)",
-              "วางโครงสร้างโค้ดแบบ Component-Based Architecture",
-              "เชื่อมต่อและจัดการข้อมูลผ่าน RESTful API / GraphQL"
-            ]
-          },
-          {
-            title: "UX/UI Design & Design Systems",
-            items: [
-              "ศึกษาและวิเคราะห์พฤติกรรมผู้ใช้ (UX Research)",
-              "ออกแบบส่วนติดต่อผู้ใช้ (UI Design) และสร้าง Prototype",
-              "จัดทำและดูแล Design System สำหรับองค์กร"
-            ]
-          },
-          {
-            title: "Tools & Technologies",
-            items: [
-              "Figma",
-              "HTML5 / CSS3 / Tailwind CSS",
-              "JavaScript / TypeScript",
-              "React.js / Vue.js / Next.js"
+              "วางโครงสร้างโค้ดแบบ Component-Based Architecture และ TypeScript",
+              "เชื่อมต่อและจัดการข้อมูลผ่าน RESTful API / GraphQL อย่างมีประสิทธิภาพ"
             ]
           }
         ]
@@ -82,41 +73,35 @@ export const th = {
         name: "เอกรินทร์ นีระมนต์",
         role: "Full-Stack Developer & AI Automation Specialist",
         roleUpper: "FULL-STACK DEVELOPER & AI AUTOMATION SPECIALIST",
-        badge: "Full-Stack & AI Automation",
+        badge: "Process Automation & Integration Lead",
         initials: "EN",
         color: "from-emerald-600 to-teal-700",
         avatar: "/ekarin.jpg",
         email: "mikp1919@gmail.com",
         github: "https://github.com/Xkaroy",
-        bio: "มีความยืดหยุ่นในการทำงานสูง สามารถสื่อสารและทำงานร่วมกับทีมได้อย่างมีประสิทธิภาพ เชี่ยวชาญการพัฒนาระบบครบวงจร (Frontend & Backend) และการสร้างระบบทำงานอัตโนมัติด้วย AI",
+        bio: "เชี่ยวชาญการพัฒนาระบบครบวงจร (Frontend & Backend) และการสร้างระบบทำงานอัตโนมัติด้วย AI มุ่งเน้นการทำ Process Automation และ API Integration เพื่อเพิ่มเสถียรภาพและลดขั้นตอนการทำงานในโซลูชัน Fintech",
         education: {
           highlight: "มหาวิทยาลัยหอการค้าไทย",
           text: "ปริญญาตรี คณะวิทยาศาสตร์และเทคโนโลยี สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยหอการค้าไทย (UTCC)",
           sub: "University of the Thai Chamber of Commerce"
         },
-        expertise: "Full-Stack & AI Workflows — พัฒนาระบบหน้าบ้านและหลังบ้าน ออกแบบ UI/UX ให้ใช้งานง่าย พร้อมวางระบบ AI Automation ด้วย n8n และ Make",
-        goals: "ประยุกต์ใช้เทคโนโลยี AI และระบบอัตโนมัติเพื่อลดขั้นตอนการทำงานที่ซ้ำซ้อน ช่วยเพิ่มประสิทธิภาพการดำเนินงานให้แก่องค์กร",
-        skills: ["Full-Stack", "UX/UI Design", "AI Automation Workflows", "Adaptability & Teamwork", "n8n / Make", "API Integration"],
+        expertise: "Process Automation & Integration Lead — วางระบบการทำงานอัตโนมัติด้วย n8n และ Make.com, เชื่อมต่อ API ข้ามแพลตฟอร์มทางการเงิน และพัฒนาระบบ Full-Stack",
+        goals: "ประยุกต์ใช้เทคโนโลยี AI และระบบอัตโนมัติเพื่อลดขั้นตอนการทำงานที่ซ้ำซ้อน ช่วยเพิ่มประสิทธิภาพและความรวดเร็วในการดำเนินงานให้แก่องค์กร",
+        skills: ["Process Automation", "API Integration", "Full-Stack", "UX/UI Design", "n8n / Make", "AI Workflows", "Adaptability & Teamwork"],
         sections: [
           {
-            title: "Adaptability & Teamwork",
+            title: "Fintech Alignment: Process Automation & API Integration",
             items: [
-              "ทำงานร่วมกับทีมได้อย่างมีประสิทธิภาพ ปรับตัวเข้ากับเทคโนโลยีใหม่ได้เร็ว",
-              "สามารถวิเคราะห์และรับผิดชอบภารกิจการพัฒนาซอฟต์แวร์ได้อย่างสมบูรณ์"
+              "ออกแบบและวางระบบการทำงานอัตโนมัติ (AI Workflows via n8n/Make) เพื่อลดขั้นตอนการทำงานหลังบ้าน",
+              "เชื่อมต่อ API ข้ามแพลตฟอร์มทางการเงินอย่างมีเสถียรภาพ รวดเร็ว และลดความผิดพลาดจากมนุษย์ (Zero Manual Error)",
+              "พัฒนาระบบแบบ Full-Stack ที่ยืดหยุ่นสูง รองรับการขยายตัวของระบบในอนาคต"
             ]
           },
           {
-            title: "Full-Stack Development & UX/UI",
+            title: "Full-Stack Development & Team Collaboration",
             items: [
-              "พัฒนาระบบแบบครบวงจรทั้ง Frontend และ Backend",
-              "ออกแบบส่วนติดต่อผู้ใช้ให้ตอบโจทย์การใช้งานจริงและง่ายต่อการดูแลรักษา"
-            ]
-          },
-          {
-            title: "AI Automation Workflows",
-            items: [
-              "วางระบบการทำงานอัตโนมัติด้วย n8n และ Make.com",
-              "เชื่อมต่อ API ข้ามแพลตฟอร์มเพื่อส่งผ่านข้อมูลอย่างมีเสถียรภาพ"
+              "พัฒนาระบบแบบครบวงจรทั้งส่วนหน้าบ้านและหลังบ้านอย่างมีประสิทธิภาพ",
+              "สื่อสารและปรับตัวทำงานร่วมกับทีมซอฟต์แวร์ได้อย่างรวดเร็วและสมบูรณ์"
             ]
           }
         ]
@@ -126,41 +111,35 @@ export const th = {
         name: "บวรวิชญ์ สุรินทร์",
         role: "Project Manager & Full-Stack Developer",
         roleUpper: "PROJECT MANAGER & FULL-STACK DEVELOPER",
-        badge: "Cybersecurity Certified & PM Lead",
+        badge: "Product Development & Risk Control Lead",
         initials: "BS",
         color: "from-purple-600 to-violet-700",
         avatar: "/bawornwit.jpg",
         email: "bavonvit99@gmail.com",
         github: "https://github.com/Bobangely",
-        bio: "รับหน้าที่บริหารและประสานงานโครงการ (Project Manager) ควบคุมไทม์ไลน์และคุณภาพการพัฒนาซอฟต์แวร์ ผ่านการฝึกอบรมเฉพาะทางด้าน Cybersecurity และมีความสามารถในการพัฒนาระบบ Full-Stack",
+        bio: "รับหน้าที่บริหารและประสานงานโครงการ (Project Manager) ควบคุมไทม์ไลน์และคุณภาพการพัฒนาซอฟต์แวร์ ผ่านการฝึกอบรม Cybersecurity Certified มุ่งเน้นด้าน Product Development & Risk Control ในระบบ Fintech",
         education: {
           highlight: "มหาวิทยาลัยหอการค้าไทย",
           text: "ปริญญาตรี คณะวิทยาศาสตร์และเทคโนโลยี สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยหอการค้าไทย (UTCC)",
           sub: "University of the Thai Chamber of Commerce"
         },
-        expertise: "Project Management & Security — บริหารจัดการโครงการตามหลัก Agile/Scrum ควบคุมคุณภาพงานพัฒนาซอฟต์แวร์ และตรวจสอบมาตรฐานความปลอดภัยข้อมูล",
-        goals: "กำกับดูแลและผลักดันโครงการซอฟต์แวร์ให้สำเร็จตามเป้าหมาย ส่งมอบงานตรงเวลา มีคุณภาพ และคำนึงถึงความปลอดภัยของระบบเป็นสำคัญ",
-        skills: ["Project Management", "Cybersecurity", "Full-Stack", "AI Automation Workflows", "Agile & Scrum", "Risk Management"],
+        expertise: "Product Development & Risk Control Lead — บริหารโครงการตามหลัก Agile/Scrum, ควบคุมคุณภาพงานซอฟต์แวร์, บริหารความเสี่ยง (Risk Management) และกำกับดูแลความปลอดภัยข้อมูล",
+        goals: "กำกับดูแลและผลักดันโครงการซอฟต์แวร์ให้สำเร็จตามเป้าหมาย ส่งมอบงานตรงเวลา มีคุณภาพสูง และคำนึงถึงความปลอดภัยของระบบการเงินเป็นสำคัญ",
+        skills: ["Product Development", "Risk Management", "Project Management", "Cybersecurity", "Full-Stack", "Agile & Scrum"],
         sections: [
           {
-            title: "Project Management",
+            title: "Fintech Alignment: Product Development & Risk Control",
             items: [
-              "วางแผนระยะเวลา (Timeline) และบริหารจัดการทรัพยากรโครงการ",
-              "ประสานงานภายในทีมและควบคุมกระบวนการทำงานแบบ Agile/Scrum"
+              "กำกับดูแลและบริหารจัดการโครงการซอฟต์แวร์ทางการเงินตามหลัก Agile/Scrum เพื่อส่งมอบงานตรงเวลา",
+              "นำความรู้ Cybersecurity มาควบคุมมาตรฐานความปลอดภัย บริหารความเสี่ยง (Risk Management) และป้องกันช่องโหว่ระบบ",
+              "วางโครงสร้างการพัฒนาซอฟต์แวร์แบบครอบคลุมทั้งระบบ (End-to-End Governance) เพื่อความเสถียรสูงสุด"
             ]
           },
           {
-            title: "Cybersecurity Training",
+            title: "Project Management & Software Quality",
             items: [
-              "ผ่านการฝึกอบรมเฉพาะทางด้านความปลอดภัยไซเบอร์ (Cybersecurity)",
-              "ตรวจสอบและกำกับดูแลมาตรฐานความปลอดภัยของข้อมูลในระบบ"
-            ]
-          },
-          {
-            title: "Technical Skills",
-            items: [
-              "Full-Stack Development: พัฒนาระบบส่วนหน้าบ้านและหลังบ้าน",
-              "AI Automation: ประยุกต์ใช้เทคโนโลยี AI ในการปรับปรุงกระบวนการทำงาน"
+              "วางแผนระยะเวลา (Timeline) บริหารจัดการทรัพยากร และควบคุมกระบวนการทำงาน",
+              "พัฒนาระบบ Full-Stack และกำกับดูแลมาตรฐานคุณภาพความปลอดภัยซอฟต์แวร์"
             ]
           }
         ]
@@ -170,40 +149,35 @@ export const th = {
         name: "คฑาพงษ์ มากรุง",
         role: "Backend Developer & Cybersecurity Specialist",
         roleUpper: "BACKEND DEVELOPER & CYBERSECURITY SPECIALIST",
-        badge: "High-Volume Data & Security",
+        badge: "Programming & Core Security Architecture Lead",
         initials: "KM",
         color: "from-rose-600 to-amber-700",
         avatar: "/kathapong.jpg",
         email: "kathapong123@hotmail.com",
         github: "https://github.com/KMluvcod11",
-        bio: "มีความเชี่ยวชาญการพัฒนาระบบหลังบ้าน (Backend) โดยเน้นความปลอดภัยของระบบและการป้องกันช่องโหว่ มีประสบการณ์จัดการข้อมูลขนาดใหญ่ (High-volume Data) และวิเคราะห์สถิติข้อมูล",
+        bio: "มีความเชี่ยวชาญการพัฒนาระบบหลังบ้าน (Backend) โดยเน้นความปลอดภัยของระบบและการป้องกันช่องโหว่ มีประสบการณ์จัดการข้อมูลขนาดใหญ่ (High-Volume Data Handling) และวิเคราะห์สถิติข้อมูลสำหรับสถาปัตยกรรม Fintech",
         education: {
           highlight: "มหาวิทยาลัยหอการค้าไทย",
           text: "ปริญญาตรี คณะวิทยาศาสตร์และเทคโนโลยี สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยหอการค้าไทย (UTCC)",
           sub: "University of the Thai Chamber of Commerce"
         },
-        expertise: "Backend Engineering & Data Analytics — ออกแบบโครงสร้างหลังบ้าน ป้องกันช่องโหว่ความปลอดภัย จัดการฐานข้อมูลรับส่งข้อมูลปริมาณมาก และสร้างระบบ AI Automation",
-        goals: "พัฒนาระบบหลังบ้านที่มีความเสถียร รองรับการใช้งานจำนวนมากได้อย่างรวดเร็ว ปลอดภัย และแม่นยำ",
-        skills: ["Backend Engineering", "Cybersecurity Architecture", "High-Volume Data Handling", "Data Analytics & Statistics", "AI Workflow Optimization", "Database Management"],
+        expertise: "Core Programming & Security Architecture Lead — ออกแบบโครงสร้างหลังบ้าน, ป้องกันช่องโหว่ความปลอดภัยไซเบอร์, จัดการฐานข้อมูลรองรับปริมาณข้อมูลสูง และประมวลผลสถิติอย่างแม่นยำ",
+        goals: "พัฒนาระบบหลังบ้านที่มีความเสถียรสูงสุด รองรับธุรกรรมการเงินจำนวนมากได้อย่างรวดเร็ว ปลอดภัย และแม่นยำ",
+        skills: ["Core Programming", "Cybersecurity Architecture", "High-Volume Data", "Database Management", "Data Analytics", "Backend Engineering"],
         sections: [
           {
-            title: "Backend Development & Cybersecurity",
+            title: "Fintech Alignment: Core Programming & Security Architecture",
             items: [
-              "ออกแบบและพัฒนาระบบหลังบ้านโดยมุ่งเน้นความปลอดภัย",
-              "วางโครงสร้างป้องกันช่องโหว่ความปลอดภัยของข้อมูลและระบบ"
+              "ออกแบบและพัฒนาสถาปัตยกรรมหลังบ้าน (Backend Architecture) ที่มีเสถียรภาพสูงสำหรับระบบ Fintech",
+              "จัดการการรับ-ส่งข้อมูลปริมาณมหาศาล (High-Volume Data Handling) ด้วยความแม่นยำและถูกต้องของตัวเลข",
+              "วางโครงสร้างป้องกันภัยคุกคามไซเบอร์และการรั่วไหลของข้อมูลทางการเงินอย่างเข้มงวด"
             ]
           },
           {
-            title: "Data Processing & Analytics",
+            title: "Data Processing & Backend Engineering",
             items: [
-              "จัดการการรับ-ส่งข้อมูลขนาดใหญ่ (High-volume Data Handling)",
-              "นำข้อมูลมาประมวลผลจัดทำสถิติวิเคราะห์ (Data Analytics & Statistics)"
-            ]
-          },
-          {
-            title: "AI & Automation",
-            items: [
-              "สร้างระบบการทำงานอัตโนมัติด้วย AI เพิ่มประสิทธิภาพการประมวลผลข้อมูล"
+              "ประมวลผลข้อมูลจัดทำสถิติวิเคราะห์ (Data Analytics & Statistics) อย่างแม่นยำ",
+              "สร้างระบบการทำงานอัตโนมัติเพื่อเพิ่มประสิทธิภาพการประมวลผลข้อมูลหลังบ้าน"
             ]
           }
         ]
@@ -213,40 +187,35 @@ export const th = {
         name: "ธนธรณ์ ศิริพันธ์",
         role: "Full-Stack Developer & Google Student Ambassador",
         roleUpper: "FULL-STACK DEVELOPER & GOOGLE STUDENT AMBASSADOR",
-        badge: "Google Cloud AI & Cybersecurity Trained",
+        badge: "Business Innovation & Cloud AI Lead",
         initials: "TS",
         color: "from-cyan-600 to-blue-700",
         avatar: "/thanathorn.jpg",
         email: "patzapaty13@gmail.com",
         github: "https://github.com/patzapaty13-crypto",
-        bio: "ปฏิบัติหน้าที่ Google Student Ambassador และ Tactical Support ในงาน Google Cloud AI Lab ผ่านการฝึกอบรม Cybersecurity เชี่ยวชาญการพัฒนา Full-Stack, การวิเคราะห์ข้อมูล และ AI Automation Workflow",
+        bio: "ปฏิบัติหน้าที่ Google Student Ambassador และ Tactical Support ในงาน Google Cloud AI Lab ผ่านการฝึกอบรม Cybersecurity เชี่ยวชาญการพัฒนา Full-Stack, การนำเสนอ Business Innovation และ Cloud AI Analytics ในโซลูชัน Fintech",
         education: {
           highlight: "มหาวิทยาลัยหอการค้าไทย",
           text: "ปริญญาตรี คณะวิทยาศาสตร์และเทคโนโลยี สาขาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยหอการค้าไทย (UTCC)",
           sub: "University of the Thai Chamber of Commerce"
         },
-        expertise: "Full-Stack & Cloud AI Development — ออกแบบและพัฒนาเว็บแอปพลิเคชันครบวงจร ตั้งแต่ UI/UX ไปจนถึง Backend, Database, Google Cloud AI และระบบอัตโนมัติ",
-        goals: "พัฒนาซอฟต์แวร์ที่มีคุณภาพสูง เชื่อมโยงเทคโนโลยี AI เข้ากับระบบงานจริงเพื่อสร้างประโยชน์สูงสุดแก่ผู้ใช้งาน",
-        skills: ["Full-Stack", "Google Cloud AI", "Tactical Cloud Support", "Cybersecurity Audit", "Data Analytics", "AI Automation Workflows", "Next.js / Spring Boot"],
+        expertise: "Business Innovation & Cloud AI Lead — ขับเคลื่อนนวัตกรรมทางธุรกิจด้วย Google Cloud AI, วิเคราะห์ข้อมูลพฤติกรรมการเงิน (Data Analytics) และพัฒนาระบบ Full-Stack",
+        goals: "พัฒนาซอฟต์แวร์ที่มีคุณภาพสูง เชื่อมโยงเทคโนโลยี AI เข้ากับระบบงานจริงเพื่อสร้างนวัตกรรมและประโยชน์สูงสุดแก่ผู้ใช้งาน",
+        skills: ["Business Innovation", "Google Cloud AI", "Full-Stack", "Tactical Cloud Support", "Data Analytics", "Cybersecurity Audit", "Next.js / Spring Boot"],
         sections: [
           {
-            title: "Google Student Ambassador & Leadership",
+            title: "Fintech Alignment: Business Innovation & Cloud AI",
             items: [
-              "เข้าร่วมโครงการ Google Student Ambassador Program",
-              "ปฏิบัติหน้าที่ Tactical Support ในงาน Google Cloud AI Lab"
+              "ขับเคลื่อนนวัตกรรมทางธุรกิจ (Business Innovation) ในโซลูชัน Fintech โดยประยุกต์ใช้ Google Cloud AI",
+              "พัฒนาโมเดลวิเคราะห์ข้อมูล (Data Analytics) และ AI อัจฉริยะเพื่อประมวลผลพฤติกรรมการเงินของผู้ใช้",
+              "พัฒนาระบบแบบ Full-Stack ที่เชื่อมโยงเทคโนโลยีขั้นสูงเข้ากับความต้องการของธุรกิจทางการเงินยุคใหม่"
             ]
           },
           {
-            title: "Cybersecurity Training",
+            title: "Google Student Ambassador & Cloud Leadership",
             items: [
-              "ผ่านการฝึกอบรมเฉพาะทางด้านความปลอดภัยไซเบอร์ (Cybersecurity)"
-            ]
-          },
-          {
-            title: "Technical Skills",
-            items: [
-              "Full-Stack Development: พัฒนาระบบทั้งหน้าบ้านและหลังบ้าน (Frontend & Backend)",
-              "Data Analytics & AI Automation: วิเคราะห์ข้อมูลและสร้างระบบทำงานอัตโนมัติด้วย AI"
+              "ปฏิบัติหน้าที่ Google Student Ambassador และ Tactical Support ในงาน Google Cloud AI Lab",
+              "ผ่านการฝึกอบรมเฉพาะทางด้านความปลอดภัยไซเบอร์ (Cybersecurity Training)"
             ]
           }
         ]

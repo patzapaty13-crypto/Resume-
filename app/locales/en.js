@@ -34,45 +34,36 @@ export const en = {
         name: "Wananon Saengthong",
         role: "Frontend Developer & UX/UI Designer",
         roleUpper: "FRONTEND DEVELOPER & UX/UI DESIGNER",
-        badge: "UX/UI & Frontend Specialist",
+        badge: "Customer Journey & Design Thinking Lead",
         initials: "WS",
         color: "from-blue-600 to-indigo-700",
-        avatar: null,
+        avatar: "/wananon.jpg",
         email: "2310511101014@live4.utcc.ac.th",
         github: "https://github.com/Nonperchica",
-        bio: "Specializing in Frontend development using React, Vue.js, and Tailwind CSS paired with UI/UX design in Figma, Design Systems, and user research to deliver great digital experiences.",
+        bio: "Specializing in Frontend development with React, Vue.js, and Tailwind CSS paired with UI/UX design in Figma, Design Systems, and User Research to deliver intuitive Customer Journeys for Fintech solutions.",
         education: {
           highlight: "University of the Thai Chamber of Commerce",
           text: "Bachelor of Science in Computer Science, University of the Thai Chamber of Commerce (UTCC)",
           sub: "University of the Thai Chamber of Commerce"
         },
-        expertise: "Frontend & UX/UI Design — UI design with Figma, web app development with React, Vue.js, TypeScript, and RESTful API integration.",
-        goals: "Dedicated to building elegant, responsive, and high-performance interfaces tailored for real users.",
-        skills: ["Frontend Web/Mobile", "Responsive Design", "Component Architecture", "RESTful API", "UX Research", "Figma Design System", "Vue.js / React", "TypeScript"],
+        expertise: "Customer Journey & Design Thinking Lead — UI prototyping with Figma, user research for Fintech, Vue/React engineering, and transactional friction reduction.",
+        goals: "Building beautiful, accessible, and high-performance interfaces that instill trust in real-world financial transactions.",
+        skills: ["Customer Journey", "Design Thinking", "Frontend Web/Mobile", "Responsive Design", "RESTful API", "UX Research", "Figma Design System", "Vue.js / React"],
         sections: [
           {
-            title: "Frontend Development",
+            title: "Fintech Alignment: Customer Journey & Design Thinking",
             items: [
-              "Responsive web and mobile application engineering",
-              "Component-based UI architecture design",
+              "Designing seamless Customer Journeys for Fintech solutions to simplify complex financial workflows",
+              "Applying Design Thinking & UX Research to minimize user anxiety and prevent transaction mistakes",
+              "Building secure, reliable, and accessible Figma Design Systems across all responsive devices"
+            ]
+          },
+          {
+            title: "Frontend Development & Engineering",
+            items: [
+              "Responsive web and mobile application engineering across device breakpoints",
+              "Component-based architecture and TypeScript integration",
               "RESTful API & GraphQL data integration"
-            ]
-          },
-          {
-            title: "UX/UI Design & Design Systems",
-            items: [
-              "User research and usability evaluation",
-              "Interactive UI prototyping in Figma",
-              "Design System creation and governance"
-            ]
-          },
-          {
-            title: "Tools & Technologies",
-            items: [
-              "Figma",
-              "HTML5 / CSS3 / Tailwind CSS",
-              "JavaScript / TypeScript",
-              "React.js / Vue.js / Next.js"
             ]
           }
         ]
@@ -82,41 +73,35 @@ export const en = {
         name: "Ekarin Neeramon",
         role: "Full-Stack Developer & AI Automation Specialist",
         roleUpper: "FULL-STACK DEVELOPER & AI AUTOMATION SPECIALIST",
-        badge: "Full-Stack & AI Automation",
+        badge: "Process Automation & Integration Lead",
         initials: "EN",
         color: "from-emerald-600 to-teal-700",
         avatar: "/ekarin.jpg",
         email: "mikp1919@gmail.com",
         github: "https://github.com/Xkaroy",
-        bio: "Highly adaptable team player with strong communication skills. Experienced in full-stack web development (Frontend & Backend) and creating AI workflow automations.",
+        bio: "Full-Stack Engineer specialized in AI workflow automations and API integration. Focused on Process Automation and cross-platform financial data synchronization for Fintech applications.",
         education: {
           highlight: "University of the Thai Chamber of Commerce",
           text: "Bachelor of Science in Computer Science, University of the Thai Chamber of Commerce (UTCC)",
           sub: "University of the Thai Chamber of Commerce"
         },
-        expertise: "Full-Stack & AI Workflows — Building web apps (Frontend & Backend) with intuitive UI/UX and automated AI workflows via n8n and Make.",
-        goals: "Leveraging AI technologies and workflow automation to eliminate repetitive tasks and boost organizational productivity.",
-        skills: ["Full-Stack", "UX/UI Design", "AI Automation Workflows", "Adaptability & Teamwork", "n8n / Make", "API Integration"],
+        expertise: "Process Automation & Integration Lead — Automated workflow design via n8n/Make, cross-platform API integration, and full-stack development.",
+        goals: "Leveraging AI automation to eliminate manual tasks, boosting operational efficiency and speed across enterprise workflows.",
+        skills: ["Process Automation", "API Integration", "Full-Stack", "UX/UI Design", "n8n / Make", "AI Workflows", "Adaptability & Teamwork"],
         sections: [
           {
-            title: "Adaptability & Teamwork",
+            title: "Fintech Alignment: Process Automation & API Integration",
             items: [
-              "Collaborating effectively in team settings with rapid technical learning",
-              "Independently delivering complete software modules"
+              "Designing automated AI workflows (n8n/Make) to eliminate manual backend operational bottlenecks",
+              "Integrating cross-platform financial APIs with high stability, speed, and zero manual error",
+              "Developing flexible Full-Stack services ready for scalable business growth"
             ]
           },
           {
-            title: "Full-Stack Development & UX/UI",
+            title: "Full-Stack Development & Team Collaboration",
             items: [
               "End-to-end application development (Frontend & Backend)",
-              "Practical and maintainable user interface engineering"
-            ]
-          },
-          {
-            title: "AI Automation Workflows",
-            items: [
-              "Automated workflow design using n8n and Make.com",
-              "Cross-platform API integration for data synchronization"
+              "Collaborating effectively in team settings with rapid technical execution"
             ]
           }
         ]
@@ -126,41 +111,35 @@ export const en = {
         name: "Bawornwit Surin",
         role: "Project Manager & Full-Stack Developer",
         roleUpper: "PROJECT MANAGER & FULL-STACK DEVELOPER",
-        badge: "Cybersecurity Certified & PM Lead",
+        badge: "Product Development & Risk Control Lead",
         initials: "BS",
         color: "from-purple-600 to-violet-700",
         avatar: "/bawornwit.jpg",
         email: "bavonvit99@gmail.com",
         github: "https://github.com/Bobangely",
-        bio: "Managing project timelines and quality governance (Project Manager). Certified in specialized Cybersecurity standards with full-stack development expertise.",
+        bio: "Managing project timelines and quality governance (Project Manager). Cybersecurity Certified with strong full-stack skills, leading Product Development & Risk Control in Fintech projects.",
         education: {
           highlight: "University of the Thai Chamber of Commerce",
           text: "Bachelor of Science in Computer Science, University of the Thai Chamber of Commerce (UTCC)",
           sub: "University of the Thai Chamber of Commerce"
         },
-        expertise: "Project Management & Security — Agile/Scrum project governance, software quality control, and data security auditing.",
-        goals: "Guiding software development initiatives to success, delivering on time with high quality and system security at the core.",
-        skills: ["Project Management", "Cybersecurity", "Full-Stack", "AI Automation Workflows", "Agile & Scrum", "Risk Management"],
+        expertise: "Product Development & Risk Control Lead — Agile/Scrum project governance, software quality assurance, risk management, and cybersecurity compliance.",
+        goals: "Guiding software development initiatives to success, delivering on time with high quality and financial security at the core.",
+        skills: ["Product Development", "Risk Management", "Project Management", "Cybersecurity", "Full-Stack", "Agile & Scrum"],
         sections: [
           {
-            title: "Project Management",
+            title: "Fintech Alignment: Product Development & Risk Control",
             items: [
-              "Timeline planning and project resource allocation",
-              "Agile/Scrum workflow coordination and team lead"
+              "Governing financial software projects using Agile/Scrum methodologies for on-time delivery",
+              "Integrating Cybersecurity standards, risk management protocols, and system vulnerability safeguards",
+              "Ensuring end-to-end software quality and operational compliance for high-availability systems"
             ]
           },
           {
-            title: "Cybersecurity Training",
+            title: "Project Management & Software Quality",
             items: [
-              "Completed specialized Cybersecurity training",
-              "Data security standards auditing and compliance"
-            ]
-          },
-          {
-            title: "Technical Skills",
-            items: [
-              "Full-Stack Development: Frontend and backend implementation",
-              "AI Automation: AI integration for process improvement"
+              "Timeline planning, resource management, and sprint execution",
+              "Full-stack development and security standards compliance"
             ]
           }
         ]
@@ -170,39 +149,34 @@ export const en = {
         name: "Kathapong Makroong",
         role: "Backend Developer & Cybersecurity Specialist",
         roleUpper: "BACKEND DEVELOPER & CYBERSECURITY SPECIALIST",
-        badge: "High-Volume Data & Security",
+        badge: "Programming & Core Security Architecture Lead",
         initials: "KM",
         color: "from-rose-600 to-amber-700",
         avatar: "/kathapong.jpg",
         email: "kathapong123@hotmail.com",
         github: "https://github.com/KMluvcod11",
-        bio: "Specializing in Backend Engineering with a focus on system security and vulnerability prevention. Experienced in high-volume data processing and statistical analysis.",
+        bio: "Specializing in Backend Engineering with focus on system security and vulnerability prevention. Experienced in high-volume data handling and statistical processing for Fintech architectures.",
         education: {
           highlight: "University of the Thai Chamber of Commerce",
           text: "Bachelor of Science in Computer Science, University of the Thai Chamber of Commerce (UTCC)",
           sub: "University of the Thai Chamber of Commerce"
         },
-        expertise: "Backend Engineering & Data Analytics — Secure backend architecture, vulnerability prevention, high-throughput database administration, and AI automation.",
-        goals: "Building stable, secure backend systems capable of processing high-volume traffic rapidly and accurately.",
-        skills: ["Backend Engineering", "Cybersecurity Architecture", "High-Volume Data Handling", "Data Analytics & Statistics", "AI Workflow Optimization", "Database Management"],
+        expertise: "Core Programming & Security Architecture Lead — Secure backend architecture, vulnerability prevention, high-throughput database administration, and analytical statistics.",
+        goals: "Building stable, secure backend systems capable of processing high-volume financial traffic rapidly and accurately.",
+        skills: ["Core Programming", "Cybersecurity Architecture", "High-Volume Data", "Database Management", "Data Analytics", "Backend Engineering"],
         sections: [
           {
-            title: "Backend Development & Cybersecurity",
+            title: "Fintech Alignment: Core Programming & Security Architecture",
             items: [
-              "Backend architecture development focusing on security",
-              "Vulnerability prevention and data protection structures"
+              "Architecting high-availability secure backend infrastructure for Fintech applications",
+              "Engineering high-volume financial data processing pipelines with strict numerical precision",
+              "Implementing rigorous cybersecurity defenses against financial data leaks and breaches"
             ]
           },
           {
-            title: "Data Processing & Analytics",
+            title: "Data Processing & Backend Engineering",
             items: [
-              "High-volume data handling and transmission",
-              "Data processing for analytical reporting and statistics"
-            ]
-          },
-          {
-            title: "AI & Automation",
-            items: [
+              "High-volume data processing for analytical reporting and statistics",
               "Automated data processing systems powered by AI"
             ]
           }
@@ -213,40 +187,35 @@ export const en = {
         name: "Thanathorn Siriphan",
         role: "Full-Stack Developer & Google Student Ambassador",
         roleUpper: "FULL-STACK DEVELOPER & GOOGLE STUDENT AMBASSADOR",
-        badge: "Google Cloud AI & Cybersecurity Trained",
+        badge: "Business Innovation & Cloud AI Lead",
         initials: "TS",
         color: "from-cyan-600 to-blue-700",
         avatar: "/thanathorn.jpg",
         email: "patzapaty13@gmail.com",
         github: "https://github.com/patzapaty13-crypto",
-        bio: "Serving as Google Student Ambassador and Tactical Support member at Google Cloud AI Lab. Cybersecurity certified with full-stack, data analytics, and AI workflow experience.",
+        bio: "Serving as Google Student Ambassador and Tactical Support member at Google Cloud AI Lab. Cybersecurity certified with full-stack expertise, driving Business Innovation & Cloud AI Analytics in Fintech solutions.",
         education: {
           highlight: "University of the Thai Chamber of Commerce",
           text: "Bachelor of Science in Computer Science, University of the Thai Chamber of Commerce (UTCC)",
           sub: "University of the Thai Chamber of Commerce"
         },
-        expertise: "Full-Stack & Cloud AI Development — End-to-end application development from UI/UX to Backend, Database, Google Cloud AI, and automation.",
-        goals: "Building high-quality software systems with AI integration to deliver maximum value to users.",
-        skills: ["Full-Stack", "Google Cloud AI", "Tactical Cloud Support", "Cybersecurity Audit", "Data Analytics", "AI Automation Workflows", "Next.js / Spring Boot"],
+        expertise: "Business Innovation & Cloud AI Lead — Driving business innovation with Google Cloud AI, user financial data analytics, and full-stack application engineering.",
+        goals: "Building high-quality software systems with advanced AI integration to deliver innovative value to users.",
+        skills: ["Business Innovation", "Google Cloud AI", "Full-Stack", "Tactical Cloud Support", "Data Analytics", "Cybersecurity Audit", "Next.js / Spring Boot"],
         sections: [
           {
-            title: "Google Student Ambassador & Leadership",
+            title: "Fintech Alignment: Business Innovation & Cloud AI",
             items: [
-              "Member of the Google Student Ambassador Program",
-              "Tactical Support member at Google Cloud AI Lab"
+              "Driving Business Innovation in Fintech solutions powered by Google Cloud AI technologies",
+              "Developing Data Analytics models and smart AI tools to analyze user financial behavior",
+              "Building scalable Full-Stack architectures connecting cutting-edge AI with modern business needs"
             ]
           },
           {
-            title: "Cybersecurity Training",
+            title: "Google Student Ambassador & Cloud Leadership",
             items: [
+              "Serving as Google Student Ambassador and Tactical Support member at Google Cloud AI Lab",
               "Completed specialized Cybersecurity training"
-            ]
-          },
-          {
-            title: "Technical Skills",
-            items: [
-              "Full-Stack Development: Frontend & Backend development",
-              "Data Analytics & AI Automation: Data analysis and AI workflow design"
             ]
           }
         ]
