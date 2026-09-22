@@ -56,3 +56,57 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* ==========================================
+   Print / PDF Export Styles
+   ========================================== */
+@media print {
+  /* ซ่อน Navbar, Footer, ปุ่มต่างๆ */
+  nav,
+  footer,
+  .no-print,
+  [data-no-print] {
+    display: none !important;
+  }
+
+  /* Reset background & layout */
+  html, body {
+    background: white !important;
+    color: #111 !important;
+    font-size: 11pt;
+  }
+
+  /* เอา padding ด้านบนออก (ปกติใช้เว้นให้ navbar) */
+  main {
+    padding-top: 0 !important;
+  }
+
+  /* content wrapper */
+  #resume-content {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* กล่อง hero banner — พิมพ์สีพื้นหลังด้วย */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* ไม่ตัดหน้ากลาง card */
+  .rounded-3xl,
+  .rounded-2xl {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* ซ่อน top-banner bar (กลับหน้าหลัก / switcher / ปุ่มดาวน์โหลด) */
+  #top-action-bar {
+    display: none !important;
+  }
+
+  /* ลด margin ระหว่าง section */
+  .mb-10 { margin-bottom: 16pt !important; }
+  .mb-12 { margin-bottom: 18pt !important; }
+  .mb-16 { margin-bottom: 24pt !important; }
+}

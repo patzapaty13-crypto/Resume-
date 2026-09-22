@@ -27,7 +27,6 @@ import {
   FolderGit2,
   Users,
   Download,
-  Loader2,
 } from "lucide-react";
 
 // Custom Github SVG Icon
@@ -49,7 +48,6 @@ export default function IndividualResumeView({ memberId }) {
   const { t } = useLanguage();
   const router = useRouter();
   const [copied, setCopied] = useState(false);
-  const [downloading, setDownloading] = useState(false);
 
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -81,31 +79,9 @@ export default function IndividualResumeView({ memberId }) {
     }
   };
 
-  const handleDownloadPDF = async () => {
-    if (downloading) return;
-    setDownloading(true);
-    try {
-      const html2pdf = (await import("html2pdf.js")).default;
-      const element = document.getElementById("resume-content");
-      const opt = {
-        margin: [8, 8, 8, 8],
-        filename: `Resume_${member.name.replace(/\s+/g, "_")}.pdf`,
-        image: { type: "jpeg", quality: 0.95 },
-        html2canvas: {
-          scale: 2,
-          useCORS: true,
-          logging: false,
-          backgroundColor: "#fafafa",
-        },
-        jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-        pagebreak: { mode: ["avoid-all", "css", "legacy"] },
-      };
-      await html2pdf().set(opt).from(element).save();
-    } catch (err) {
-      console.error("PDF export error:", err);
-      alert("เกิดข้อผิดพลาดในการสร้าง PDF กรุณาลองใหม่");
-    } finally {
-      setDownloading(false);
+  const handleDownloadPDF = () => {
+    if (typeof window !== "undefined") {
+      window.print();
     }
   };
 
@@ -140,7 +116,7 @@ export default function IndividualResumeView({ memberId }) {
       <main className="flex-1 pt-28 pb-20">
         <div id="resume-content" className="max-w-[1100px] mx-auto px-6 md:px-8">
           {/* Top Banner & Judge Copy Link Bar */}
-          <div className="bg-white border border-gray-200 rounded-3xl p-5 md:p-6 mb-10 shadow-xs flex flex-col md:flex-row items-center justify-between gap-4">
+          <div id="top-action-bar" className="bg-white border border-gray-200 rounded-3xl p-5 md:p-6 mb-10 shadow-xs flex flex-col md:flex-row items-center justify-between gap-4">
             <Link
               href="/"
               className="inline-flex items-center gap-2 text-xs md:text-sm font-semibold text-gray-600 hover:text-primary transition-colors"
@@ -175,20 +151,10 @@ export default function IndividualResumeView({ memberId }) {
                 {/* Download PDF Button */}
                 <button
                   onClick={handleDownloadPDF}
-                  disabled={downloading}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-emerald-600 text-white hover:bg-emerald-500 disabled:opacity-60 disabled:cursor-not-allowed transition-all shadow-xs shrink-0"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-emerald-600 text-white hover:bg-emerald-500 transition-all shadow-xs shrink-0"
                 >
-                  {downloading ? (
-                    <>
-                      <Loader2 className="w-4 h-4 animate-spin" />
-                      <span>กำลังสร้าง PDF...</span>
-                    </>
-                  ) : (
-                    <>
-                      <Download className="w-4 h-4" />
-                      <span>ดาวน์โหลด PDF</span>
-                    </>
-                  )}
+                  <Download className="w-4 h-4" />
+                  <span>ดาวน์โหลด PDF</span>
                 </button>
 
                 {/* Copy Link Button for Judges */}
@@ -251,20 +217,10 @@ export default function IndividualResumeView({ memberId }) {
                   {/* Download PDF Button in Hero */}
                   <button
                     onClick={handleDownloadPDF}
-                    disabled={downloading}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold bg-emerald-500 text-white hover:bg-emerald-400 disabled:opacity-60 disabled:cursor-not-allowed transition-colors shadow-sm"
+                    className="no-print inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold bg-emerald-500 text-white hover:bg-emerald-400 transition-colors shadow-sm"
                   >
-                    {downloading ? (
-                      <>
-                        <Loader2 className="w-3.5 h-3.5 animate-spin" />
-                        <span>กำลังสร้าง PDF...</span>
-                      </>
-                    ) : (
-                      <>
-                        <Download className="w-3.5 h-3.5" />
-                        <span>ดาวน์โหลด Resume PDF</span>
-                      </>
-                    )}
+                    <Download className="w-3.5 h-3.5" />
+                    <span>ดาวน์โหลด Resume PDF</span>
                   </button>
 
                   <button
