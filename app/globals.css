@@ -58,51 +58,54 @@ body {
 }
 
 /* ==========================================
-   Print Resume — Screen Preview (hidden)
+   Print Resume — Hidden on screen, off-canvas
    ========================================== */
 #print-resume {
-  display: none;
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
 }
 
 /* ==========================================
    Print / PDF Export — One-Page A4 Resume
    ========================================== */
 @media print {
-  /* 1. Reset & A4 page setup */
+  /* 1. A4 page setup */
   @page {
     size: A4 portrait;
     margin: 12mm 14mm 12mm 14mm;
   }
 
   html, body {
-    width: 210mm;
     background: white !important;
-    color: #1a1a1a !important;
-    font-family: 'Inter', 'Noto Sans Thai', Arial, sans-serif;
-    font-size: 9pt;
-    line-height: 1.4;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
 
-  /* 2. Hide everything except the print resume */
-  body > * {
-    display: none !important;
+  /* 2. Hide EVERYTHING using visibility (children can override) */
+  body * {
+    visibility: hidden !important;
   }
-  #__next > * {
-    display: none !important;
-  }
-  /* Show ONLY the print resume */
+
+  /* 3. Show ONLY the print resume and all its children */
   #print-resume,
   #print-resume * {
-    display: revert !important;
+    visibility: visible !important;
   }
+
+  /* 4. Position the print resume to fill the page */
   #print-resume {
     display: block !important;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    opacity: 1 !important;
+    z-index: 9999 !important;
+    background: white !important;
   }
 
   /* 3. Page wrapper */
