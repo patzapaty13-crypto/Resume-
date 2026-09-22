@@ -58,55 +58,281 @@ body {
 }
 
 /* ==========================================
-   Print / PDF Export Styles
+   Print Resume — Screen Preview (hidden)
+   ========================================== */
+#print-resume {
+  display: none;
+}
+
+/* ==========================================
+   Print / PDF Export — One-Page A4 Resume
    ========================================== */
 @media print {
-  /* ซ่อน Navbar, Footer, ปุ่มต่างๆ */
-  nav,
-  footer,
-  .no-print,
-  [data-no-print] {
-    display: none !important;
+  /* 1. Reset & A4 page setup */
+  @page {
+    size: A4 portrait;
+    margin: 12mm 14mm 12mm 14mm;
   }
 
-  /* Reset background & layout */
   html, body {
+    width: 210mm;
     background: white !important;
-    color: #111 !important;
-    font-size: 11pt;
-  }
-
-  /* เอา padding ด้านบนออก (ปกติใช้เว้นให้ navbar) */
-  main {
-    padding-top: 0 !important;
-  }
-
-  /* content wrapper */
-  #resume-content {
-    max-width: 100% !important;
-    padding: 0 !important;
-  }
-
-  /* กล่อง hero banner — พิมพ์สีพื้นหลังด้วย */
-  * {
+    color: #1a1a1a !important;
+    font-family: 'Inter', 'Noto Sans Thai', Arial, sans-serif;
+    font-size: 9pt;
+    line-height: 1.4;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
 
-  /* ไม่ตัดหน้ากลาง card */
-  .rounded-3xl,
-  .rounded-2xl {
-    break-inside: avoid;
-    page-break-inside: avoid;
+  /* 2. Hide everything except the print resume */
+  body > * {
+    display: none !important;
+  }
+  #__next > * {
+    display: none !important;
+  }
+  /* Show ONLY the print resume */
+  #print-resume,
+  #print-resume * {
+    display: revert !important;
+  }
+  #print-resume {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 
-  /* ซ่อน top-banner bar (กลับหน้าหลัก / switcher / ปุ่มดาวน์โหลด) */
-  #top-action-bar {
+  /* 3. Page wrapper */
+  .print-resume-page {
+    width: 100%;
+    background: white;
+    color: #1a1a1a;
+    font-family: 'Inter', 'Noto Sans Thai', Arial, sans-serif;
+    display: block;
+    page-break-after: avoid;
+    overflow: hidden;
+  }
+
+  /* 4. Header */
+  .pr-header {
+    display: flex !important;
+    align-items: center;
+    gap: 16pt;
+    background: #1e293b;
+    color: white;
+    padding: 14pt 16pt;
+    border-radius: 6pt;
+    margin-bottom: 10pt;
+  }
+  .pr-avatar {
+    width: 64pt;
+    height: 64pt;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2pt solid rgba(255,255,255,0.3);
+    flex-shrink: 0;
+    display: block !important;
+  }
+  .pr-avatar-initials {
+    width: 64pt;
+    height: 64pt;
+    border-radius: 50%;
+    background: #3b82f6;
+    color: white;
+    font-size: 22pt;
+    font-weight: 800;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .pr-header-left { flex-shrink: 0; }
+  .pr-header-right { flex: 1; }
+  .pr-name {
+    font-size: 18pt;
+    font-weight: 800;
+    color: white;
+    margin: 0 0 2pt 0;
+    letter-spacing: -0.3pt;
+  }
+  .pr-role {
+    font-size: 8.5pt;
+    font-weight: 600;
+    color: #93c5fd;
+    margin: 0 0 2pt 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5pt;
+  }
+  .pr-badge {
+    font-size: 7.5pt;
+    color: rgba(255,255,255,0.65);
+    margin: 0 0 6pt 0;
+    font-style: italic;
+  }
+  .pr-contacts {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 6pt;
+  }
+  .pr-contact-item {
+    font-size: 7.5pt;
+    color: #bfdbfe;
+    background: rgba(255,255,255,0.1);
+    padding: 1.5pt 6pt;
+    border-radius: 3pt;
+    display: inline-block !important;
+  }
+
+  /* 5. Divider */
+  .pr-divider {
+    height: 0;
+    border: none;
     display: none !important;
   }
 
-  /* ลด margin ระหว่าง section */
-  .mb-10 { margin-bottom: 16pt !important; }
-  .mb-12 { margin-bottom: 18pt !important; }
-  .mb-16 { margin-bottom: 24pt !important; }
+  /* 6. Body — two columns */
+  .pr-body {
+    display: flex !important;
+    gap: 12pt;
+    align-items: flex-start;
+  }
+  .pr-col-left {
+    width: 36%;
+    flex-shrink: 0;
+    display: block !important;
+  }
+  .pr-col-right {
+    flex: 1;
+    display: block !important;
+  }
+
+  /* 7. Sections */
+  .pr-section {
+    margin-bottom: 9pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    display: block !important;
+  }
+  .pr-section-title {
+    font-size: 6.5pt;
+    font-weight: 800;
+    letter-spacing: 1pt;
+    color: #3b82f6;
+    text-transform: uppercase;
+    border-bottom: 0.75pt solid #3b82f6;
+    padding-bottom: 1.5pt;
+    margin-bottom: 4pt;
+  }
+  .pr-text {
+    font-size: 7.5pt;
+    color: #374151;
+    line-height: 1.45;
+    margin: 0;
+  }
+
+  /* 8. Education */
+  .pr-edu-school {
+    font-size: 8pt;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 1pt 0;
+  }
+  .pr-edu-sub {
+    font-size: 7pt;
+    color: #6b7280;
+    font-style: italic;
+    margin: 0 0 3pt 0;
+  }
+
+  /* 9. Skills */
+  .pr-skills {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 3pt;
+  }
+  .pr-skill-tag {
+    font-size: 6.5pt;
+    font-weight: 600;
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 1.5pt 4pt;
+    border-radius: 2pt;
+    border: 0.5pt solid #bfdbfe;
+    display: inline-block !important;
+  }
+
+  /* 10. Technical Competencies */
+  .pr-comp-block {
+    margin-bottom: 5pt;
+    break-inside: avoid;
+    display: block !important;
+  }
+  .pr-comp-title {
+    font-size: 7pt;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 2pt 0;
+    background: #f1f5f9;
+    padding: 1.5pt 4pt;
+    border-left: 2pt solid #3b82f6;
+  }
+  .pr-comp-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block !important;
+  }
+  .pr-comp-item {
+    font-size: 7pt;
+    color: #374151;
+    line-height: 1.5;
+    padding-left: 4pt;
+    display: block !important;
+  }
+
+  /* 11. Projects */
+  .pr-project-block {
+    margin-bottom: 5pt;
+    break-inside: avoid;
+    border-left: 1.5pt solid #e5e7eb;
+    padding-left: 5pt;
+    display: block !important;
+  }
+  .pr-project-header {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.5pt;
+  }
+  .pr-project-title {
+    font-size: 7.5pt;
+    font-weight: 700;
+    color: #1e293b;
+  }
+  .pr-project-tags {
+    font-size: 6pt;
+    color: #6b7280;
+    font-style: italic;
+  }
+  .pr-project-desc {
+    font-size: 7pt;
+    color: #4b5563;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  /* 12. Footer */
+  .pr-footer {
+    display: flex !important;
+    justify-content: space-between;
+    border-top: 0.5pt solid #e5e7eb;
+    padding-top: 4pt;
+    margin-top: 8pt;
+    font-size: 6.5pt;
+    color: #9ca3af;
+  }
 }
+

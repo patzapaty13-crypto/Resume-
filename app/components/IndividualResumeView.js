@@ -9,6 +9,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ProjectModal from "./ProjectModal";
 import { projectsData } from "../data/projectsData";
+import PrintResume from "./PrintResume";
 import {
   GraduationCap,
   Code,
@@ -494,6 +495,9 @@ export default function IndividualResumeView({ memberId }) {
         isOpen={isModalOpen}
         onClose={closeModal}
       />
+
+      {/* Print-only one-page A4 resume — hidden on screen */}
+      <PrintResume member={member} memberProjects={memberProjects} />
 
       <Footer />
     </div>
