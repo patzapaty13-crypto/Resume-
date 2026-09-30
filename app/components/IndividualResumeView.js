@@ -348,6 +348,19 @@ export default function IndividualResumeView({ memberId }) {
             </div>
           </div>
 
+          {member.id === "thanathorn" && (
+            <section className="bg-white border border-gray-200 rounded-3xl p-8 md:p-10 mb-12 shadow-xs" aria-labelledby="lab-photos-title">
+              <h2 id="lab-photos-title" className="text-xl font-bold text-gray-900 mb-2">Google Cloud AI Hands-on Labs — Bangkok</h2>
+              <p className="text-sm text-gray-500 mb-6">Google Student Ambassador · ภาพกิจกรรมและการสนับสนุนงาน Hands-on Labs</p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <img src="/thanathorn-labs-group.jpg" alt="ภาพหมู่ผู้เข้าร่วม Google Cloud AI Hands-on Labs Bangkok" className="w-full h-auto rounded-2xl md:col-span-2" loading="lazy" />
+                <img src="/thanathorn-labs-participants.jpg" alt="ผู้เข้าร่วมกิจกรรม Hands-on Labs Bangkok" className="w-full h-auto rounded-2xl" loading="lazy" />
+                <img src="/thanathorn-labs-session.jpg" alt="บรรยากาศการทำกิจกรรมร่วมกันใน Hands-on Labs" className="w-full h-auto rounded-2xl" loading="lazy" />
+              </div>
+              <a href="/Thanathorn_Siriphan_Resume_Updated.pdf" download className="inline-flex mt-6 text-sm font-semibold text-primary underline">ดาวน์โหลดเรซูเม่พร้อมรูปกิจกรรม (PDF)</a>
+            </section>
+          )}
+
           {/* Technical Competencies Breakdown */}
           <div className="bg-white border border-gray-200 rounded-3xl p-8 md:p-10 mb-12 shadow-xs">
             <h3 className="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2">
